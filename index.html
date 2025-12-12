@@ -6,9 +6,6 @@
 <title>Tattoo by Benjie Cortez | Angeles, Pampanga</title>
 <meta name="description" content="Tattoo by Benjie Cortez — Angeles, Pampanga. Custom tattoos, Polynesian, minimalist, lettering. Book your appointment today." />
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
 <style>
   :root{
     --bg:#07070a;
@@ -72,15 +69,15 @@ body{
   margin:0;
   color:var(--text);
 
+  /* FULL PAGE FIXED LOGO BACKGROUND */
   background:
     linear-gradient(180deg, rgba(7,7,10,.20), rgba(12,12,18,.30)),
     url("logo.png") center center / cover no-repeat fixed;
 
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height:1.6;
   overflow-x:hidden;
 }
-
 
 body::before{
   content:"";
@@ -402,23 +399,21 @@ body::before{
 
   .gallery{
   display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 10px;
-  margin-top: 14px;
+  grid-template-columns: repeat(4, 1fr); /* 4 per row */
+  gap: 12px;
 }
 
 
   .tile{
   position:relative;
-  border-radius:14px;
+  border-radius: 16px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.10);
   background: rgba(255,255,255,.04);
-  aspect-ratio: 1 / 1;   /* square thumbnail */
-  box-shadow: 0 8px 18px rgba(0,0,0,.35);
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
   cursor:pointer;
 }
-
 
 
   .tile img{
@@ -430,17 +425,15 @@ body::before{
     transition: transform .35s ease, filter .35s ease;
     filter: contrast(1.05) saturate(1.05);
   }
-
-
-  .tile:hover img{ transform: scale(1.05); filter: contrast(1.10) saturate(1.10); }
- .tile:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(180deg, transparent 55%, rgba(0,0,0,.7)),
-    radial-gradient(circle at center, rgba(255,255,255,.08), transparent 40%);
-}
+  .tile:hover img{ transform: scale(1.04); filter: contrast(1.12) saturate(1.12); }
+  .tile:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,.70));
+    opacity:.9;
+    pointer-events:none;
+  }
   .tile .cap{
     position:absolute;
     left:12px; right:12px; bottom:12px;
@@ -686,25 +679,7 @@ body::before{
 	.gallery{ grid-template-columns: 1fr; }
 
   }
-
-/* === MAANGAS NA FONT STYLES === */
-h1, h2, h3,
-.brand,
-.section-head h2{
-  font-family: 'Cinzel', serif;
-  letter-spacing: 0.8px;
-}
-
-/* Extra astig hero title */
-.hero-left h1{
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-}
-
-
-
 </style>
-
 </head>
 
 <body>
@@ -788,6 +763,109 @@ h1, h2, h3,
 <main>
 
   <!-- WORK / GALLERY -->
+
+
+
+  <!-- ✅ SOCIAL MEDIA (NEW SECTION) -->
+  <section id="social">
+    <div class="section-head">
+      <div>
+        <h2>Social Media</h2>
+        <p>Follow us for fresh tattoo updates, new designs, and videos.</p>
+      </div>
+    </div>
+    <div class="divider"></div>
+
+    <div class="social-wrap">
+      <div class="social-grid">
+
+        <!-- Facebook -->
+        <a class="social-card" href="https://www.facebook.com/tattoobybenjie/" target="_blank" rel="noopener" aria-label="Facebook">
+          <div class="s-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.88h-2.33v6.99A10 10 0 0 0 22 12z"/>
+            </svg>
+          </div>
+          <div><b>Facebook</b><span>tattoobybenjie</span></div>
+        </a>
+
+        <!-- Instagram -->
+        <a class="social-card" href="https://www.instagram.com/tattoobybenjie/" target="_blank" rel="noopener" aria-label="Instagram">
+          <div class="s-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/>
+              <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+              <circle cx="17.5" cy="6.5" r="1"/>
+            </svg>
+          </div>
+          <div><b>Instagram</b><span>@tattoobybenjie</span></div>
+        </a>
+
+        <!-- YouTube -->
+        <a class="social-card" href="https://www.youtube.com/@Tattoobybenjie.walkingstreet" target="_blank" rel="noopener" aria-label="YouTube">
+          <div class="s-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M21.6 7.2a3 3 0 0 0-2.11-2.12C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.49.48A3 3 0 0 0 2.4 7.2 31.7 31.7 0 0 0 2 12a31.7 31.7 0 0 0 .4 4.8 3 3 0 0 0 2.11 2.12C6.3 19.4 12 19.4 12 19.4s5.7 0 7.49-.48a3 3 0 0 0 2.11-2.12A31.7 31.7 0 0 0 22 12a31.7 31.7 0 0 0-.4-4.8z"/>
+              <path d="M10 15.5v-7l6 3.5-6 3.5z" fill="black" opacity=".9"/>
+            </svg>
+          </div>
+          <div><b>YouTube</b><span>Tattoo by Benjie</span></div>
+        </a>
+
+        <!-- TikTok -->
+        <a class="social-card" href="https://www.tiktok.com/@tattoobybenjie1989" target="_blank" rel="noopener" aria-label="TikTok">
+          <div class="s-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M14 3c.5 3.2 2.7 5.7 6 6v3.1c-2.1 0-4-.7-5.6-2v6.3c0 3.2-2.6 5.8-5.8 5.8S3 19.6 3 16.4s2.6-5.8 5.8-5.8c.5 0 1 0 1.4.2v3.2c-.4-.2-.9-.4-1.4-.4-1.4 0-2.6 1.2-2.6 2.6S7.4 18.8 8.8 18.8s2.6-1.2 2.6-2.6V3h2.6z"/>
+            </svg>
+          </div>
+          <div><b>TikTok</b><span>@tattoobybenjie1989</span></div>
+        </a>
+
+      </div>
+
+      <p style="margin:14px 2px 0; color: var(--muted2); font-weight:650;">
+        If any link is wrong, just change the URL inside this Social Media section.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- LOCATION / CONTACT -->
+  <section id="location">
+    <div class="section-head">
+      <div>
+        <h2>Location & Contact</h2>
+        <p>Angeles, Pampanga — near Fields Avenue / Balibago.</p>
+      </div>
+    </div>
+    <div class="divider"></div>
+
+    <div class="contact">
+      <div class="card">
+        <h3>Studio Address</h3>
+        <p>
+          Tattoo By Benjie Cortez, 1033 Walking St, Fields Ave<br>
+          Balibago, Angeles, 2009 Pampanga
+        </p>
+        <div style="height:10px"></div>
+        <h3>Hours</h3>
+        <p>Open 24 Hours (By Appointment)</p>
+
+        <div style="height:14px"></div>
+        <h3>Direct Links</h3>
+        <p style="display:flex; flex-direction:column; gap:8px;">
+          <a class="btn" style="justify-content:flex-start;" href="tel:09215702029">📞 Call: 0921 570 2029</a>
+          <a class="btn" style="justify-content:flex-start;" href="mailto:tattoobybenjie@gmail.com?subject=Tattoo%20Inquiry&body=Hi%20Benjie%2C%0A%0AI%20have%20a%20tattoo%20inquiry.%0A%0AName%3A%0AIdea%3A%0ASize%3A%0APlacement%3A%0APreferred%20date%2Ftime%3A%0A%0AThank%20you!">✉️ Email Inquiry</a>
+          <a class="btn" style="justify-content:flex-start;" href="https://maps.google.com/?q=Tattoo+By+Benjie+Cortez,+1033+Walking+St,+Fields+Ave,+Balibago,+Angeles,+2009+Pampanga" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+        </p>
+      </div>
+
+      <div class="map" aria-label="Google map">
+        <iframe src="https://www.google.com/maps?q=Tattoo+By+Benjie+Cortez,+1033+Walking+St,+Fields+Ave,+Balibago,+Angeles,+2009+Pampanga&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
 
 
 <section id="gallery">
@@ -1042,107 +1120,6 @@ h1, h2, h3,
     </div>
   </section>
 
-  <!-- ✅ SOCIAL MEDIA (NEW SECTION) -->
-  <section id="social">
-    <div class="section-head">
-      <div>
-        <h2>Social Media</h2>
-        <p>Follow us for fresh tattoo updates, new designs, and videos.</p>
-      </div>
-    </div>
-    <div class="divider"></div>
-
-    <div class="social-wrap">
-      <div class="social-grid">
-
-        <!-- Facebook -->
-        <a class="social-card" href="https://www.facebook.com/tattoobybenjie/" target="_blank" rel="noopener" aria-label="Facebook">
-          <div class="s-ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-              <path d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.88h-2.33v6.99A10 10 0 0 0 22 12z"/>
-            </svg>
-          </div>
-          <div><b>Facebook</b><span>tattoobybenjie</span></div>
-        </a>
-
-        <!-- Instagram -->
-        <a class="social-card" href="https://www.instagram.com/tattoobybenjie/" target="_blank" rel="noopener" aria-label="Instagram">
-          <div class="s-ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/>
-              <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
-              <circle cx="17.5" cy="6.5" r="1"/>
-            </svg>
-          </div>
-          <div><b>Instagram</b><span>@tattoobybenjie</span></div>
-        </a>
-
-        <!-- YouTube -->
-        <a class="social-card" href="https://www.youtube.com/@Tattoobybenjie.walkingstreet" target="_blank" rel="noopener" aria-label="YouTube">
-          <div class="s-ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-              <path d="M21.6 7.2a3 3 0 0 0-2.11-2.12C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.49.48A3 3 0 0 0 2.4 7.2 31.7 31.7 0 0 0 2 12a31.7 31.7 0 0 0 .4 4.8 3 3 0 0 0 2.11 2.12C6.3 19.4 12 19.4 12 19.4s5.7 0 7.49-.48a3 3 0 0 0 2.11-2.12A31.7 31.7 0 0 0 22 12a31.7 31.7 0 0 0-.4-4.8z"/>
-              <path d="M10 15.5v-7l6 3.5-6 3.5z" fill="black" opacity=".9"/>
-            </svg>
-          </div>
-          <div><b>YouTube</b><span>Tattoo by Benjie</span></div>
-        </a>
-
-        <!-- TikTok -->
-        <a class="social-card" href="https://www.tiktok.com/@tattoobybenjie1989" target="_blank" rel="noopener" aria-label="TikTok">
-          <div class="s-ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-              <path d="M14 3c.5 3.2 2.7 5.7 6 6v3.1c-2.1 0-4-.7-5.6-2v6.3c0 3.2-2.6 5.8-5.8 5.8S3 19.6 3 16.4s2.6-5.8 5.8-5.8c.5 0 1 0 1.4.2v3.2c-.4-.2-.9-.4-1.4-.4-1.4 0-2.6 1.2-2.6 2.6S7.4 18.8 8.8 18.8s2.6-1.2 2.6-2.6V3h2.6z"/>
-            </svg>
-          </div>
-          <div><b>TikTok</b><span>@tattoobybenjie1989</span></div>
-        </a>
-
-      </div>
-
-      <p style="margin:14px 2px 0; color: var(--muted2); font-weight:650;">
-        If any link is wrong, just change the URL inside this Social Media section.
-      </p>
-    </div>
-  </section>
-
-
-  <!-- LOCATION / CONTACT -->
-  <section id="location">
-    <div class="section-head">
-      <div>
-        <h2>Location & Contact</h2>
-        <p>Angeles, Pampanga — near Fields Avenue / Balibago.</p>
-      </div>
-    </div>
-    <div class="divider"></div>
-
-    <div class="contact">
-      <div class="card">
-        <h3>Studio Address</h3>
-        <p>
-          Tattoo By Benjie Cortez, 1033 Walking St, Fields Ave<br>
-          Balibago, Angeles, 2009 Pampanga
-        </p>
-        <div style="height:10px"></div>
-        <h3>Hours</h3>
-        <p>Open 24 Hours (By Appointment)</p>
-
-        <div style="height:14px"></div>
-        <h3>Direct Links</h3>
-        <p style="display:flex; flex-direction:column; gap:8px;">
-          <a class="btn" style="justify-content:flex-start;" href="tel:09215702029">📞 Call: 0921 570 2029</a>
-          <a class="btn" style="justify-content:flex-start;" href="mailto:tattoobybenjie@gmail.com?subject=Tattoo%20Inquiry&body=Hi%20Benjie%2C%0A%0AI%20have%20a%20tattoo%20inquiry.%0A%0AName%3A%0AIdea%3A%0ASize%3A%0APlacement%3A%0APreferred%20date%2Ftime%3A%0A%0AThank%20you!">✉️ Email Inquiry</a>
-          <a class="btn" style="justify-content:flex-start;" href="https://maps.google.com/?q=Tattoo+By+Benjie+Cortez,+1033+Walking+St,+Fields+Ave,+Balibago,+Angeles,+2009+Pampanga" target="_blank" rel="noopener">📍 Open in Google Maps</a>
-        </p>
-      </div>
-
-      <div class="map" aria-label="Google map">
-        <iframe src="https://www.google.com/maps?q=Tattoo+By+Benjie+Cortez,+1033+Walking+St,+Fields+Ave,+Balibago,+Angeles,+2009+Pampanga&output=embed" loading="lazy"></iframe>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section id="faq">
     <div class="section-head">
@@ -1155,13 +1132,9 @@ h1, h2, h3,
 
     <div class="faq">
       <details>
-  <summary>Do you accept walk-ins?</summary>
-  <p>
-    Yes, we accept walk-ins. However, booking in advance is strongly recommended
-    to secure your preferred time and avoid waiting.
-  </p>
-</details>
-
+        <summary>Do you accept walk-ins?</summary>
+        <p>We recommend booking first. You can call or email to confirm availability.</p>
+      </details>
       <details>
         <summary>Can I bring my own design?</summary>
         <p>Yes. Send your reference photos and we’ll help refine the final tattoo design.</p>
